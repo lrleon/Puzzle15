@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WalkingDistance", "WalkingDistance\WalkingDistance.vcxproj", "{7CE07463-EBCF-42EE-855D-8FEA176E8711}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0D212B30-0D1E-4838-8696-F73532F37671}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Gasser.pdf = docs\Gasser.pdf
+		docs\JohnsonStory.pdf = docs\JohnsonStory.pdf
+		docs\Korf1985.pdf = docs\Korf1985.pdf
+		docs\Korf2000.pdf = docs\Korf2000.pdf
+		docs\Nau.pdf = docs\Nau.pdf
+		docs\Walker1974.pdf = docs\Walker1974.pdf
+		docs\walkingDistance.gif = docs\walkingDistance.gif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{AA1989B1-7915-4FCD-83DD-ADA07ABA92D4}"
+	ProjectSection(SolutionItems) = preProject
+		15Puzzle.in = 15Puzzle.in
+		readme = readme
+		test.in = test.in
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ID", "ID\ID.vcxproj", "{CA68FB92-52DA-45AE-9D03-24566983EC1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CE07463-EBCF-42EE-855D-8FEA176E8711}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7CE07463-EBCF-42EE-855D-8FEA176E8711}.Debug|Win32.Build.0 = Debug|Win32
+		{7CE07463-EBCF-42EE-855D-8FEA176E8711}.Release|Win32.ActiveCfg = Release|Win32
+		{7CE07463-EBCF-42EE-855D-8FEA176E8711}.Release|Win32.Build.0 = Release|Win32
+		{CA68FB92-52DA-45AE-9D03-24566983EC1D}.Debug|Win32.ActiveCfg = Release|Win32
+		{CA68FB92-52DA-45AE-9D03-24566983EC1D}.Debug|Win32.Build.0 = Release|Win32
+		{CA68FB92-52DA-45AE-9D03-24566983EC1D}.Release|Win32.ActiveCfg = Release|Win32
+		{CA68FB92-52DA-45AE-9D03-24566983EC1D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

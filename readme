@@ -1,0 +1,32 @@
+These experiments came about from attempts to solve the 15-puzzle.
+At first, I tried breadth-first search, which quickly ran out of memory.
+This is why the state of the puzzle has been represented as a 64-bit integer,
+to save memory, even though it leads to obscure, platform-dependent code.
+I was led to look up iterative deepening, but that didn't work either.  Then I
+tried IDA*, which was successful in 1985, but didn't work for me.  
+
+I think the problem is that all descriptions of iterative deepening I have found
+say nothing about keeping track of the nodes that have already been seen on the 
+path.  It may be that the authors are implicity assuming that the search space is 
+a tree.  For example, the IDA* algorithm on Wiipedia, supposedly detects when no 
+solution exists, although this is clearly not true if there are cycles in the search 
+space.
+
+I now want to try out some of the techniques I had already discarded, with iterative
+deepening modified to keep track of the nodes on the current search path.  Also, I'm
+going to get organized and use source control. 
+
+Another thing that occurs to me is that when searching with a fixed cutoff,
+it is possible to reach the same node through two different paths, for instance by
+first moving up then left, and also by moving left than up.  Since these are on
+different search paths, the technique above would not prevent having to expand both 
+nodes.  We can't save all nodes explored because of memory constraints, but why not
+save all nodes visited in the first K levels?
+
+Some other things that have occurred to me:  
+1. IDA* is supposed to be a modification A*, but A* is a best-first method, and IDA* is not.  Would there be any advantage to tyring the successors of a node in order of the heuristic cost of the successor?  It would be marginal at best, because when the search depth is too small we have to expand the whole level anyway.  Still, the last level is the biggest.  It's easy to insert a priority queue, so there's no reason not to try.
+2. How about combining a heuristic with bidirectional search?   
+
+Also, I want to try out several of the heuristics that have been developed for the
+15-puzzle.
+    
